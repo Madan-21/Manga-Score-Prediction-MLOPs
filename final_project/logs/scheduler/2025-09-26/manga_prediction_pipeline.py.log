@@ -1,0 +1,441 @@
+[2025-09-26 00:49:26,800] {processor.py:153} INFO - Started process (PID=399) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 00:49:26,801] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 00:49:26,801] {logging_mixin.py:115} INFO - [2025-09-26 00:49:26,801] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 00:49:27,616] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 00:49:27,628] {logging_mixin.py:115} INFO - [2025-09-26 00:49:27,628] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 00:49:27,636] {logging_mixin.py:115} INFO - [2025-09-26 00:49:27,636] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 00:49:27,645] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.846 seconds
+[2025-09-26 01:39:58,529] {processor.py:153} INFO - Started process (PID=406) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 01:39:58,529] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 01:39:58,530] {logging_mixin.py:115} INFO - [2025-09-26 01:39:58,530] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 01:39:59,154] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 01:39:59,176] {logging_mixin.py:115} INFO - [2025-09-26 01:39:59,175] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 01:39:59,197] {logging_mixin.py:115} INFO - [2025-09-26 01:39:59,197] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 01:39:59,209] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.683 seconds
+[2025-09-26 02:33:38,821] {processor.py:153} INFO - Started process (PID=412) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 02:33:38,822] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 02:33:38,822] {logging_mixin.py:115} INFO - [2025-09-26 02:33:38,822] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 02:33:39,711] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 02:33:39,726] {logging_mixin.py:115} INFO - [2025-09-26 02:33:39,726] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 02:33:39,738] {logging_mixin.py:115} INFO - [2025-09-26 02:33:39,738] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 02:33:39,743] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.924 seconds
+[2025-09-26 03:33:16,635] {processor.py:153} INFO - Started process (PID=418) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:33:16,636] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:33:16,637] {logging_mixin.py:115} INFO - [2025-09-26 03:33:16,637] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:33:17,292] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:33:17,301] {logging_mixin.py:115} INFO - [2025-09-26 03:33:17,301] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:33:17,309] {logging_mixin.py:115} INFO - [2025-09-26 03:33:17,309] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:33:17,314] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.684 seconds
+[2025-09-26 03:46:20,879] {processor.py:153} INFO - Started process (PID=426) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:20,879] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:46:20,880] {logging_mixin.py:115} INFO - [2025-09-26 03:46:20,880] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:21,731] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:21,760] {logging_mixin.py:115} INFO - [2025-09-26 03:46:21,759] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:46:21,781] {logging_mixin.py:115} INFO - [2025-09-26 03:46:21,781] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:46:21,790] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.914 seconds
+[2025-09-26 03:46:52,030] {processor.py:153} INFO - Started process (PID=432) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:52,030] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:46:52,031] {logging_mixin.py:115} INFO - [2025-09-26 03:46:52,031] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:52,452] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:46:52,462] {logging_mixin.py:115} INFO - [2025-09-26 03:46:52,461] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:46:52,474] {logging_mixin.py:115} INFO - [2025-09-26 03:46:52,474] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:46:52,478] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.454 seconds
+[2025-09-26 03:47:22,645] {processor.py:153} INFO - Started process (PID=438) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:22,645] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:47:22,646] {logging_mixin.py:115} INFO - [2025-09-26 03:47:22,646] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:23,002] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:23,009] {logging_mixin.py:115} INFO - [2025-09-26 03:47:23,009] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:47:23,016] {logging_mixin.py:115} INFO - [2025-09-26 03:47:23,016] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:47:23,020] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.379 seconds
+[2025-09-26 03:47:53,173] {processor.py:153} INFO - Started process (PID=444) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:53,174] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:47:53,174] {logging_mixin.py:115} INFO - [2025-09-26 03:47:53,174] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:53,662] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:47:53,671] {logging_mixin.py:115} INFO - [2025-09-26 03:47:53,671] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:47:53,679] {logging_mixin.py:115} INFO - [2025-09-26 03:47:53,679] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:47:53,683] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.512 seconds
+[2025-09-26 03:48:23,887] {processor.py:153} INFO - Started process (PID=450) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:23,888] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:48:23,889] {logging_mixin.py:115} INFO - [2025-09-26 03:48:23,889] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:24,325] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:24,334] {logging_mixin.py:115} INFO - [2025-09-26 03:48:24,334] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:48:24,341] {logging_mixin.py:115} INFO - [2025-09-26 03:48:24,341] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:48:24,344] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.462 seconds
+[2025-09-26 03:48:54,504] {processor.py:153} INFO - Started process (PID=456) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:54,505] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:48:54,505] {logging_mixin.py:115} INFO - [2025-09-26 03:48:54,505] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:54,871] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:48:54,878] {logging_mixin.py:115} INFO - [2025-09-26 03:48:54,878] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:48:54,884] {logging_mixin.py:115} INFO - [2025-09-26 03:48:54,884] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:48:54,887] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.387 seconds
+[2025-09-26 03:49:25,064] {processor.py:153} INFO - Started process (PID=462) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:25,064] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:49:25,065] {logging_mixin.py:115} INFO - [2025-09-26 03:49:25,065] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:25,393] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:25,400] {logging_mixin.py:115} INFO - [2025-09-26 03:49:25,400] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:49:25,406] {logging_mixin.py:115} INFO - [2025-09-26 03:49:25,406] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:49:25,409] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.348 seconds
+[2025-09-26 03:49:55,592] {processor.py:153} INFO - Started process (PID=468) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:55,592] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:49:55,593] {logging_mixin.py:115} INFO - [2025-09-26 03:49:55,593] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:55,944] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:49:55,953] {logging_mixin.py:115} INFO - [2025-09-26 03:49:55,953] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:49:55,961] {logging_mixin.py:115} INFO - [2025-09-26 03:49:55,961] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:49:55,967] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.379 seconds
+[2025-09-26 03:50:26,154] {processor.py:153} INFO - Started process (PID=474) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:26,154] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:50:26,155] {logging_mixin.py:115} INFO - [2025-09-26 03:50:26,155] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:26,523] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:26,535] {logging_mixin.py:115} INFO - [2025-09-26 03:50:26,535] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:50:26,542] {logging_mixin.py:115} INFO - [2025-09-26 03:50:26,542] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:50:26,545] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.394 seconds
+[2025-09-26 03:50:56,711] {processor.py:153} INFO - Started process (PID=480) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:56,712] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:50:56,712] {logging_mixin.py:115} INFO - [2025-09-26 03:50:56,712] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:57,100] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:50:57,107] {logging_mixin.py:115} INFO - [2025-09-26 03:50:57,107] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:50:57,115] {logging_mixin.py:115} INFO - [2025-09-26 03:50:57,115] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:50:57,118] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.411 seconds
+[2025-09-26 03:51:27,282] {processor.py:153} INFO - Started process (PID=486) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:27,283] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:51:27,283] {logging_mixin.py:115} INFO - [2025-09-26 03:51:27,283] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:27,617] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:27,623] {logging_mixin.py:115} INFO - [2025-09-26 03:51:27,623] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:51:27,629] {logging_mixin.py:115} INFO - [2025-09-26 03:51:27,629] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:51:27,632] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.353 seconds
+[2025-09-26 03:51:57,813] {processor.py:153} INFO - Started process (PID=492) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:57,814] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:51:57,814] {logging_mixin.py:115} INFO - [2025-09-26 03:51:57,814] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:58,344] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:51:58,356] {logging_mixin.py:115} INFO - [2025-09-26 03:51:58,356] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:51:58,364] {logging_mixin.py:115} INFO - [2025-09-26 03:51:58,364] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:51:58,367] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.559 seconds
+[2025-09-26 03:52:28,576] {processor.py:153} INFO - Started process (PID=498) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:28,577] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:52:28,577] {logging_mixin.py:115} INFO - [2025-09-26 03:52:28,577] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:28,927] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:28,934] {logging_mixin.py:115} INFO - [2025-09-26 03:52:28,934] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:52:28,940] {logging_mixin.py:115} INFO - [2025-09-26 03:52:28,940] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:52:28,943] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.371 seconds
+[2025-09-26 03:52:59,134] {processor.py:153} INFO - Started process (PID=504) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:59,135] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:52:59,136] {logging_mixin.py:115} INFO - [2025-09-26 03:52:59,136] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:59,471] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:52:59,477] {logging_mixin.py:115} INFO - [2025-09-26 03:52:59,477] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:52:59,484] {logging_mixin.py:115} INFO - [2025-09-26 03:52:59,484] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:52:59,487] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.357 seconds
+[2025-09-26 03:53:29,674] {processor.py:153} INFO - Started process (PID=510) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:53:29,674] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:53:29,675] {logging_mixin.py:115} INFO - [2025-09-26 03:53:29,675] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:53:30,008] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:53:30,015] {logging_mixin.py:115} INFO - [2025-09-26 03:53:30,015] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:53:30,020] {logging_mixin.py:115} INFO - [2025-09-26 03:53:30,020] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:53:30,024] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.354 seconds
+[2025-09-26 03:54:00,221] {processor.py:153} INFO - Started process (PID=516) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:00,222] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:54:00,222] {logging_mixin.py:115} INFO - [2025-09-26 03:54:00,222] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:00,554] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:00,561] {logging_mixin.py:115} INFO - [2025-09-26 03:54:00,561] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:54:00,567] {logging_mixin.py:115} INFO - [2025-09-26 03:54:00,567] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:54:00,570] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.352 seconds
+[2025-09-26 03:54:30,764] {processor.py:153} INFO - Started process (PID=522) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:30,764] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:54:30,765] {logging_mixin.py:115} INFO - [2025-09-26 03:54:30,765] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:31,233] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:54:31,241] {logging_mixin.py:115} INFO - [2025-09-26 03:54:31,240] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:54:31,252] {logging_mixin.py:115} INFO - [2025-09-26 03:54:31,252] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:54:31,260] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.500 seconds
+[2025-09-26 03:55:01,447] {processor.py:153} INFO - Started process (PID=528) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:01,447] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:55:01,448] {logging_mixin.py:115} INFO - [2025-09-26 03:55:01,448] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:01,781] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:01,788] {logging_mixin.py:115} INFO - [2025-09-26 03:55:01,788] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:55:01,794] {logging_mixin.py:115} INFO - [2025-09-26 03:55:01,794] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:55:01,797] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.354 seconds
+[2025-09-26 03:55:31,989] {processor.py:153} INFO - Started process (PID=534) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:31,990] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:55:31,990] {logging_mixin.py:115} INFO - [2025-09-26 03:55:31,990] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:32,324] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:55:32,330] {logging_mixin.py:115} INFO - [2025-09-26 03:55:32,330] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:55:32,337] {logging_mixin.py:115} INFO - [2025-09-26 03:55:32,337] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:55:32,340] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.355 seconds
+[2025-09-26 03:56:02,526] {processor.py:153} INFO - Started process (PID=540) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:02,527] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:56:02,528] {logging_mixin.py:115} INFO - [2025-09-26 03:56:02,528] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:02,867] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:02,874] {logging_mixin.py:115} INFO - [2025-09-26 03:56:02,874] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:56:02,880] {logging_mixin.py:115} INFO - [2025-09-26 03:56:02,880] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:56:02,883] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.360 seconds
+[2025-09-26 03:56:33,034] {processor.py:153} INFO - Started process (PID=546) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:33,036] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:56:33,037] {logging_mixin.py:115} INFO - [2025-09-26 03:56:33,037] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:33,474] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:56:33,481] {logging_mixin.py:115} INFO - [2025-09-26 03:56:33,481] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:56:33,487] {logging_mixin.py:115} INFO - [2025-09-26 03:56:33,487] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:56:33,491] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.460 seconds
+[2025-09-26 03:57:03,696] {processor.py:153} INFO - Started process (PID=552) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:03,696] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:57:03,697] {logging_mixin.py:115} INFO - [2025-09-26 03:57:03,697] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:04,032] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:04,039] {logging_mixin.py:115} INFO - [2025-09-26 03:57:04,038] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:57:04,045] {logging_mixin.py:115} INFO - [2025-09-26 03:57:04,044] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:57:04,048] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 03:57:34,220] {processor.py:153} INFO - Started process (PID=558) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:34,221] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:57:34,221] {logging_mixin.py:115} INFO - [2025-09-26 03:57:34,221] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:34,577] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:57:34,583] {logging_mixin.py:115} INFO - [2025-09-26 03:57:34,583] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:57:34,589] {logging_mixin.py:115} INFO - [2025-09-26 03:57:34,589] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:57:34,592] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.378 seconds
+[2025-09-26 03:58:04,786] {processor.py:153} INFO - Started process (PID=564) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:04,787] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:58:04,787] {logging_mixin.py:115} INFO - [2025-09-26 03:58:04,787] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:05,127] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:05,134] {logging_mixin.py:115} INFO - [2025-09-26 03:58:05,133] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:58:05,140] {logging_mixin.py:115} INFO - [2025-09-26 03:58:05,140] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:58:05,143] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.361 seconds
+[2025-09-26 03:58:35,350] {processor.py:153} INFO - Started process (PID=570) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:35,351] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:58:35,351] {logging_mixin.py:115} INFO - [2025-09-26 03:58:35,351] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:35,685] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:58:35,691] {logging_mixin.py:115} INFO - [2025-09-26 03:58:35,691] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:58:35,697] {logging_mixin.py:115} INFO - [2025-09-26 03:58:35,697] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:58:35,700] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.354 seconds
+[2025-09-26 03:59:05,884] {processor.py:153} INFO - Started process (PID=576) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:05,885] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:59:05,885] {logging_mixin.py:115} INFO - [2025-09-26 03:59:05,885] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:06,286] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:06,293] {logging_mixin.py:115} INFO - [2025-09-26 03:59:06,293] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:59:06,299] {logging_mixin.py:115} INFO - [2025-09-26 03:59:06,299] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:59:06,302] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.422 seconds
+[2025-09-26 03:59:36,492] {processor.py:153} INFO - Started process (PID=582) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:36,492] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 03:59:36,493] {logging_mixin.py:115} INFO - [2025-09-26 03:59:36,493] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:36,841] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 03:59:36,847] {logging_mixin.py:115} INFO - [2025-09-26 03:59:36,847] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 03:59:36,853] {logging_mixin.py:115} INFO - [2025-09-26 03:59:36,853] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 03:59:36,856] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.368 seconds
+[2025-09-26 04:00:07,018] {processor.py:153} INFO - Started process (PID=588) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:07,019] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:00:07,020] {logging_mixin.py:115} INFO - [2025-09-26 04:00:07,020] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:07,381] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:07,387] {logging_mixin.py:115} INFO - [2025-09-26 04:00:07,387] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:00:07,393] {logging_mixin.py:115} INFO - [2025-09-26 04:00:07,393] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:00:07,396] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.383 seconds
+[2025-09-26 04:00:37,583] {processor.py:153} INFO - Started process (PID=594) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:37,584] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:00:37,585] {logging_mixin.py:115} INFO - [2025-09-26 04:00:37,584] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:37,929] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:00:37,936] {logging_mixin.py:115} INFO - [2025-09-26 04:00:37,936] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:00:37,943] {logging_mixin.py:115} INFO - [2025-09-26 04:00:37,943] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:00:37,946] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.367 seconds
+[2025-09-26 04:01:08,142] {processor.py:153} INFO - Started process (PID=600) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:08,143] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:01:08,144] {logging_mixin.py:115} INFO - [2025-09-26 04:01:08,143] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:08,491] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:08,497] {logging_mixin.py:115} INFO - [2025-09-26 04:01:08,497] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:01:08,503] {logging_mixin.py:115} INFO - [2025-09-26 04:01:08,503] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:01:08,506] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.368 seconds
+[2025-09-26 04:01:38,671] {processor.py:153} INFO - Started process (PID=606) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:38,672] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:01:38,672] {logging_mixin.py:115} INFO - [2025-09-26 04:01:38,672] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:39,014] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:01:39,021] {logging_mixin.py:115} INFO - [2025-09-26 04:01:39,021] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:01:39,027] {logging_mixin.py:115} INFO - [2025-09-26 04:01:39,027] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:01:39,030] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.363 seconds
+[2025-09-26 04:02:09,222] {processor.py:153} INFO - Started process (PID=612) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:09,222] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:02:09,222] {logging_mixin.py:115} INFO - [2025-09-26 04:02:09,222] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:09,557] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:09,563] {logging_mixin.py:115} INFO - [2025-09-26 04:02:09,563] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:02:09,569] {logging_mixin.py:115} INFO - [2025-09-26 04:02:09,569] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:02:09,572] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.354 seconds
+[2025-09-26 04:02:39,779] {processor.py:153} INFO - Started process (PID=618) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:39,780] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:02:39,780] {logging_mixin.py:115} INFO - [2025-09-26 04:02:39,780] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:40,113] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:02:40,119] {logging_mixin.py:115} INFO - [2025-09-26 04:02:40,119] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:02:40,125] {logging_mixin.py:115} INFO - [2025-09-26 04:02:40,125] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:02:40,128] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.353 seconds
+[2025-09-26 04:03:10,332] {processor.py:153} INFO - Started process (PID=624) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:10,333] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:03:10,333] {logging_mixin.py:115} INFO - [2025-09-26 04:03:10,333] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:10,669] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:10,675] {logging_mixin.py:115} INFO - [2025-09-26 04:03:10,675] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:03:10,682] {logging_mixin.py:115} INFO - [2025-09-26 04:03:10,681] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:03:10,684] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 04:03:40,850] {processor.py:153} INFO - Started process (PID=630) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:40,850] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:03:40,850] {logging_mixin.py:115} INFO - [2025-09-26 04:03:40,850] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:41,176] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:03:41,183] {logging_mixin.py:115} INFO - [2025-09-26 04:03:41,183] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:03:41,189] {logging_mixin.py:115} INFO - [2025-09-26 04:03:41,188] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:03:41,191] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.345 seconds
+[2025-09-26 04:04:11,374] {processor.py:153} INFO - Started process (PID=636) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:11,375] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:04:11,375] {logging_mixin.py:115} INFO - [2025-09-26 04:04:11,375] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:11,710] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:11,716] {logging_mixin.py:115} INFO - [2025-09-26 04:04:11,716] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:04:11,722] {logging_mixin.py:115} INFO - [2025-09-26 04:04:11,722] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:04:11,725] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.355 seconds
+[2025-09-26 04:04:41,916] {processor.py:153} INFO - Started process (PID=642) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:41,917] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:04:41,918] {logging_mixin.py:115} INFO - [2025-09-26 04:04:41,918] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:42,259] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:04:42,266] {logging_mixin.py:115} INFO - [2025-09-26 04:04:42,265] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:04:42,272] {logging_mixin.py:115} INFO - [2025-09-26 04:04:42,272] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:04:42,275] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.362 seconds
+[2025-09-26 04:05:12,475] {processor.py:153} INFO - Started process (PID=648) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:12,476] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:05:12,476] {logging_mixin.py:115} INFO - [2025-09-26 04:05:12,476] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:12,810] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:12,816] {logging_mixin.py:115} INFO - [2025-09-26 04:05:12,816] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:05:12,823] {logging_mixin.py:115} INFO - [2025-09-26 04:05:12,823] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:05:12,826] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.355 seconds
+[2025-09-26 04:05:42,977] {processor.py:153} INFO - Started process (PID=654) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:42,978] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:05:42,978] {logging_mixin.py:115} INFO - [2025-09-26 04:05:42,978] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:43,314] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:05:43,320] {logging_mixin.py:115} INFO - [2025-09-26 04:05:43,320] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:05:43,326] {logging_mixin.py:115} INFO - [2025-09-26 04:05:43,326] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:05:43,329] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.355 seconds
+[2025-09-26 04:06:13,537] {processor.py:153} INFO - Started process (PID=660) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:13,538] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:06:13,539] {logging_mixin.py:115} INFO - [2025-09-26 04:06:13,539] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:13,874] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:13,880] {logging_mixin.py:115} INFO - [2025-09-26 04:06:13,880] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:06:13,886] {logging_mixin.py:115} INFO - [2025-09-26 04:06:13,886] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:06:13,889] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 04:06:44,060] {processor.py:153} INFO - Started process (PID=666) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:44,061] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:06:44,062] {logging_mixin.py:115} INFO - [2025-09-26 04:06:44,062] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:44,397] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:06:44,403] {logging_mixin.py:115} INFO - [2025-09-26 04:06:44,403] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:06:44,409] {logging_mixin.py:115} INFO - [2025-09-26 04:06:44,409] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:06:44,412] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 04:07:14,618] {processor.py:153} INFO - Started process (PID=672) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:14,619] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:07:14,619] {logging_mixin.py:115} INFO - [2025-09-26 04:07:14,619] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:14,963] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:14,970] {logging_mixin.py:115} INFO - [2025-09-26 04:07:14,970] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:07:14,976] {logging_mixin.py:115} INFO - [2025-09-26 04:07:14,976] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:07:14,979] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.365 seconds
+[2025-09-26 04:07:45,168] {processor.py:153} INFO - Started process (PID=678) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:45,168] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:07:45,169] {logging_mixin.py:115} INFO - [2025-09-26 04:07:45,169] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:45,565] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:07:45,573] {logging_mixin.py:115} INFO - [2025-09-26 04:07:45,573] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:07:45,579] {logging_mixin.py:115} INFO - [2025-09-26 04:07:45,579] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:07:45,583] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.420 seconds
+[2025-09-26 04:08:15,748] {processor.py:153} INFO - Started process (PID=684) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:15,748] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:08:15,749] {logging_mixin.py:115} INFO - [2025-09-26 04:08:15,749] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:16,086] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:16,092] {logging_mixin.py:115} INFO - [2025-09-26 04:08:16,092] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:08:16,098] {logging_mixin.py:115} INFO - [2025-09-26 04:08:16,098] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:08:16,101] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.358 seconds
+[2025-09-26 04:08:46,308] {processor.py:153} INFO - Started process (PID=690) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:46,308] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:08:46,309] {logging_mixin.py:115} INFO - [2025-09-26 04:08:46,309] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:46,643] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:08:46,650] {logging_mixin.py:115} INFO - [2025-09-26 04:08:46,650] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:08:46,656] {logging_mixin.py:115} INFO - [2025-09-26 04:08:46,656] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:08:46,660] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 04:09:16,829] {processor.py:153} INFO - Started process (PID=696) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:16,830] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:09:16,830] {logging_mixin.py:115} INFO - [2025-09-26 04:09:16,830] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:17,209] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:17,215] {logging_mixin.py:115} INFO - [2025-09-26 04:09:17,215] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:09:17,222] {logging_mixin.py:115} INFO - [2025-09-26 04:09:17,222] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:09:17,225] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.399 seconds
+[2025-09-26 04:09:47,404] {processor.py:153} INFO - Started process (PID=702) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:47,405] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:09:47,406] {logging_mixin.py:115} INFO - [2025-09-26 04:09:47,406] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:47,745] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:09:47,752] {logging_mixin.py:115} INFO - [2025-09-26 04:09:47,752] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:09:47,758] {logging_mixin.py:115} INFO - [2025-09-26 04:09:47,758] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:09:47,761] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.361 seconds
+[2025-09-26 04:10:17,939] {processor.py:153} INFO - Started process (PID=708) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:17,940] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:10:17,940] {logging_mixin.py:115} INFO - [2025-09-26 04:10:17,940] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:18,270] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:18,276] {logging_mixin.py:115} INFO - [2025-09-26 04:10:18,276] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:10:18,283] {logging_mixin.py:115} INFO - [2025-09-26 04:10:18,283] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:10:18,286] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.350 seconds
+[2025-09-26 04:10:48,447] {processor.py:153} INFO - Started process (PID=714) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:48,447] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:10:48,448] {logging_mixin.py:115} INFO - [2025-09-26 04:10:48,448] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:48,845] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:10:48,852] {logging_mixin.py:115} INFO - [2025-09-26 04:10:48,852] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:10:48,858] {logging_mixin.py:115} INFO - [2025-09-26 04:10:48,858] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:10:48,861] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.418 seconds
+[2025-09-26 04:11:18,992] {processor.py:153} INFO - Started process (PID=720) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:18,992] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:11:18,992] {logging_mixin.py:115} INFO - [2025-09-26 04:11:18,992] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:19,314] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:19,320] {logging_mixin.py:115} INFO - [2025-09-26 04:11:19,320] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:11:19,326] {logging_mixin.py:115} INFO - [2025-09-26 04:11:19,326] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:11:19,329] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.339 seconds
+[2025-09-26 04:11:49,491] {processor.py:153} INFO - Started process (PID=726) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:49,491] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:11:49,492] {logging_mixin.py:115} INFO - [2025-09-26 04:11:49,492] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:49,829] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:11:49,835] {logging_mixin.py:115} INFO - [2025-09-26 04:11:49,835] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:11:49,841] {logging_mixin.py:115} INFO - [2025-09-26 04:11:49,841] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:11:49,844] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.356 seconds
+[2025-09-26 04:12:20,063] {processor.py:153} INFO - Started process (PID=732) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:20,063] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:12:20,064] {logging_mixin.py:115} INFO - [2025-09-26 04:12:20,063] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:20,389] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:20,395] {logging_mixin.py:115} INFO - [2025-09-26 04:12:20,395] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:12:20,401] {logging_mixin.py:115} INFO - [2025-09-26 04:12:20,401] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:12:20,404] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.345 seconds
+[2025-09-26 04:12:50,595] {processor.py:153} INFO - Started process (PID=738) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:50,596] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:12:50,596] {logging_mixin.py:115} INFO - [2025-09-26 04:12:50,596] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:50,922] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:12:50,929] {logging_mixin.py:115} INFO - [2025-09-26 04:12:50,929] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:12:50,935] {logging_mixin.py:115} INFO - [2025-09-26 04:12:50,935] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:12:50,938] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.346 seconds
+[2025-09-26 04:13:21,095] {processor.py:153} INFO - Started process (PID=744) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:21,097] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:13:21,097] {logging_mixin.py:115} INFO - [2025-09-26 04:13:21,097] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:21,430] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:21,436] {logging_mixin.py:115} INFO - [2025-09-26 04:13:21,436] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:13:21,442] {logging_mixin.py:115} INFO - [2025-09-26 04:13:21,442] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:13:21,445] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.354 seconds
+[2025-09-26 04:13:51,657] {processor.py:153} INFO - Started process (PID=750) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:51,657] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:13:51,658] {logging_mixin.py:115} INFO - [2025-09-26 04:13:51,658] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:51,983] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:13:51,990] {logging_mixin.py:115} INFO - [2025-09-26 04:13:51,990] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:13:51,996] {logging_mixin.py:115} INFO - [2025-09-26 04:13:51,996] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:13:51,999] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.345 seconds
+[2025-09-26 04:15:33,514] {processor.py:153} INFO - Started process (PID=756) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:15:33,515] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:15:33,517] {logging_mixin.py:115} INFO - [2025-09-26 04:15:33,517] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:15:34,221] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:15:34,240] {logging_mixin.py:115} INFO - [2025-09-26 04:15:34,239] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:15:34,258] {logging_mixin.py:115} INFO - [2025-09-26 04:15:34,258] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:15:34,265] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.761 seconds
+[2025-09-26 04:16:04,377] {processor.py:153} INFO - Started process (PID=764) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:04,377] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:16:04,378] {logging_mixin.py:115} INFO - [2025-09-26 04:16:04,378] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:04,734] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:04,741] {logging_mixin.py:115} INFO - [2025-09-26 04:16:04,741] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:16:04,748] {logging_mixin.py:115} INFO - [2025-09-26 04:16:04,748] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:16:04,751] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.379 seconds
+[2025-09-26 04:16:34,947] {processor.py:153} INFO - Started process (PID=770) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:34,947] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:16:34,948] {logging_mixin.py:115} INFO - [2025-09-26 04:16:34,948] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:35,307] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:16:35,314] {logging_mixin.py:115} INFO - [2025-09-26 04:16:35,314] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:16:35,320] {logging_mixin.py:115} INFO - [2025-09-26 04:16:35,320] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:16:35,324] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.381 seconds
+[2025-09-26 04:17:05,470] {processor.py:153} INFO - Started process (PID=776) to work on /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:17:05,470] {processor.py:641} INFO - Processing file /opt/airflow/dags/manga_prediction_pipeline.py for tasks to queue
+[2025-09-26 04:17:05,471] {logging_mixin.py:115} INFO - [2025-09-26 04:17:05,470] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:17:05,824] {processor.py:651} INFO - DAG(s) dict_keys(['manga_prediction_pipeline']) retrieved from /opt/airflow/dags/manga_prediction_pipeline.py
+[2025-09-26 04:17:05,830] {logging_mixin.py:115} INFO - [2025-09-26 04:17:05,830] {dag.py:2379} INFO - Sync 1 DAGs
+[2025-09-26 04:17:05,836] {logging_mixin.py:115} INFO - [2025-09-26 04:17:05,836] {dag.py:2931} INFO - Setting next_dagrun for manga_prediction_pipeline to None, run_after=None
+[2025-09-26 04:17:05,839] {processor.py:161} INFO - Processing /opt/airflow/dags/manga_prediction_pipeline.py took 0.372 seconds

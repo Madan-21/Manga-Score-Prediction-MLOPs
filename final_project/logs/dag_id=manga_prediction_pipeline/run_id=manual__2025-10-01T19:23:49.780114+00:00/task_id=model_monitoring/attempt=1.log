@@ -1,0 +1,54 @@
+[2025-10-01 19:25:08,716] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-01T19:23:49.780114+00:00 [queued]>
+[2025-10-01 19:25:08,719] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-01T19:23:49.780114+00:00 [queued]>
+[2025-10-01 19:25:08,719] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 19:25:08,719] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-01 19:25:08,719] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 19:25:08,724] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_monitoring> on 2025-10-01 19:23:49.780114+00:00
+[2025-10-01 19:25:08,727] {standard_task_runner.py:52} INFO - Started process 305 to run task
+[2025-10-01 19:25:08,728] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_monitoring', 'manual__2025-10-01T19:23:49.780114+00:00', '--job-id', '486', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp826g666m', '--error-file', '/tmp/tmpr2yas1yt']
+[2025-10-01 19:25:08,729] {standard_task_runner.py:80} INFO - Job 486: Subtask model_monitoring
+[2025-10-01 19:25:08,749] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-01T19:23:49.780114+00:00 [running]> on host 49cbd92af88a
+[2025-10-01 19:25:08,772] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-01T19:23:49.780114+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-01T19:23:49.780114+00:00
+[2025-10-01 19:25:08,773] {model_monitoring.py:22} INFO - Loading processed data from /opt/***/data/processed/manga_processed.parquet for monitoring.
+[2025-10-01 19:25:08,819] {model_monitoring.py:24} INFO - Processed data loaded. Shape: (21795, 28)
+[2025-10-01 19:25:10,868] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/manga_prediction_pipeline.py", line 41, in _run_model_monitoring
+    run_model_monitoring()
+  File "/opt/airflow/src/model_monitoring.py", line 56, in run_model_monitoring
+    data_drift_report.save_html(data_drift_report_path)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/suite/base_suite.py", line 183, in save_html
+    dashboard_id, dashboard_info, graphs = self._build_dashboard_info()
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/report/report.py", line 212, in _build_dashboard_info
+    html_info = renderer.render_html(test)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/metrics/data_drift/dataset_drift_metric.py", line 111, in render_html
+    result = obj.get_result()
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/base_metric.py", line 232, in get_result
+    raise result.exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/calculation_engine/engine.py", line 42, in execute_metrics
+    calculations[metric] = calculation.calculate(context, converted_data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/calculation_engine/python_engine.py", line 88, in calculate
+    return self.metric.calculate(data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/metrics/data_drift/dataset_drift_metric.py", line 97, in calculate
+    agg_data=True,
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/calculations/data_drift.py", line 449, in get_drift_for_columns
+    agg_data=agg_data,
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/calculations/data_drift.py", line 137, in get_one_column_drift
+    f"An empty column '{column_name}' was provided for drift calculation in the reference dataset."
+ValueError: An empty column 'primary_author' was provided for drift calculation in the reference dataset.
+[2025-10-01 19:25:10,876] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=model_monitoring, execution_date=20251001T192349, start_date=20251001T192508, end_date=20251001T192510
+[2025-10-01 19:25:10,881] {standard_task_runner.py:97} ERROR - Failed to execute job 486 for task model_monitoring (An empty column 'primary_author' was provided for drift calculation in the reference dataset.; 305)
+[2025-10-01 19:25:10,915] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-10-01 19:25:10,931] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

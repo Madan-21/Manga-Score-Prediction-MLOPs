@@ -1,0 +1,50 @@
+[2025-10-01 18:49:25,840] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_validation manual__2025-10-01T18:48:20.824746+00:00 [queued]>
+[2025-10-01 18:49:25,847] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_validation manual__2025-10-01T18:48:20.824746+00:00 [queued]>
+[2025-10-01 18:49:25,847] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 18:49:25,847] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-01 18:49:25,847] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 18:49:25,854] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_validation> on 2025-10-01 18:48:20.824746+00:00
+[2025-10-01 18:49:25,859] {standard_task_runner.py:52} INFO - Started process 300 to run task
+[2025-10-01 18:49:25,861] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_validation', 'manual__2025-10-01T18:48:20.824746+00:00', '--job-id', '437', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp_0imvx8s', '--error-file', '/tmp/tmpslf9_40a']
+[2025-10-01 18:49:25,862] {standard_task_runner.py:80} INFO - Job 437: Subtask data_validation
+[2025-10-01 18:49:25,886] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_validation manual__2025-10-01T18:48:20.824746+00:00 [running]> on host 475f6409a430
+[2025-10-01 18:49:25,919] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_validation
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-01T18:48:20.824746+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-01T18:48:20.824746+00:00
+[2025-10-01 18:49:25,937] {authentication.py:66} INFO - package: mysql.connector.plugins
+[2025-10-01 18:49:25,937] {authentication.py:67} INFO - plugin_name: mysql_native_password
+[2025-10-01 18:49:25,937] {authentication.py:71} INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+[2025-10-01 18:49:25,938] {data_validation.py:231} ERROR - MariaDB error: 1045 (28000): Access denied for user 'root'@'172.19.0.6' (using password: YES)
+[2025-10-01 18:49:25,939] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/manga_prediction_pipeline.py", line 37, in _validate_processed_data
+    validate_data(table_name='manga_processed')
+  File "/opt/airflow/src/data_validation.py", line 34, in validate_data
+    database=DB_NAME
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/pooling.py", line 294, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 164, in __init__
+    self.connect(**kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1181, in connect
+    self._open_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 579, in _open_connection
+    self._conn_attrs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 309, in _do_auth
+    self._auth_switch_request(username, password)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 366, in _auth_switch_request
+    raise get_exception(packet)
+mysql.connector.errors.ProgrammingError: 1045 (28000): Access denied for user 'root'@'172.19.0.6' (using password: YES)
+[2025-10-01 18:49:25,946] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=data_validation, execution_date=20251001T184820, start_date=20251001T184925, end_date=20251001T184925
+[2025-10-01 18:49:25,951] {standard_task_runner.py:97} ERROR - Failed to execute job 437 for task data_validation (1045 (28000): Access denied for user 'root'@'172.19.0.6' (using password: YES); 300)
+[2025-10-01 18:49:25,957] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-10-01 18:49:25,974] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,52 @@
+[2025-09-24 19:11:09,154] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-24 19:11:09,157] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-24 19:11:09,157] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-24 19:11:09,157] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-24 19:11:09,157] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-24 19:11:09,161] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_preprocessing> on 2025-09-24 19:11:06.798026+00:00
+[2025-09-24 19:11:09,163] {standard_task_runner.py:52} INFO - Started process 398 to run task
+[2025-09-24 19:11:09,164] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_preprocessing', 'manual__2025-09-24T19:11:06.798026+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp1x1l7ylk', '--error-file', '/tmp/tmp33hidxnv']
+[2025-09-24 19:11:09,165] {standard_task_runner.py:80} INFO - Job 32: Subtask data_preprocessing
+[2025-09-24 19:11:09,182] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [running]> on host 50bd396892d5
+[2025-09-24 19:11:09,209] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_preprocessing
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-24T19:11:06.798026+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-24T19:11:06.798026+00:00
+[2025-09-24 19:11:09,209] {logging_mixin.py:115} INFO - Reading staged data from /opt/***/data/staged/manga.parquet
+[2025-09-24 19:11:09,317] {logging_mixin.py:115} INFO - Staged data read successfully. Shape: (66371, 26)
+[2025-09-24 19:11:09,317] {logging_mixin.py:115} INFO - Dropping rows with missing scores. Original rows: 66371
+[2025-09-24 19:11:09,328] {logging_mixin.py:115} INFO - Rows after dropping missing scores: 21795
+[2025-09-24 19:11:09,329] {logging_mixin.py:115} INFO - Parsing 'genres' column...
+[2025-09-24 19:11:09,329] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/data_preprocessing.py", line 30, in preprocess_data
+    df['genres'] = df['genres'].apply(lambda x: [g['name'] for g in json.loads(x)] if isinstance(x, str) and x.startswith('[') else [])
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 4357, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1043, in apply
+    return self.apply_standard()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1101, in apply_standard
+    convert=self.convert_dtype,
+  File "pandas/_libs/lib.pyx", line 2859, in pandas._libs.lib.map_infer
+  File "/opt/airflow/src/data_preprocessing.py", line 30, in <lambda>
+    df['genres'] = df['genres'].apply(lambda x: [g['name'] for g in json.loads(x)] if isinstance(x, str) and x.startswith('[') else [])
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+[2025-09-24 19:11:09,334] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=data_preprocessing, execution_date=20250924T191106, start_date=20250924T191109, end_date=20250924T191109
+[2025-09-24 19:11:09,338] {standard_task_runner.py:97} ERROR - Failed to execute job 32 for task data_preprocessing (Expecting value: line 1 column 2 (char 1); 398)
+[2025-09-24 19:11:09,344] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-09-24 19:11:09,360] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

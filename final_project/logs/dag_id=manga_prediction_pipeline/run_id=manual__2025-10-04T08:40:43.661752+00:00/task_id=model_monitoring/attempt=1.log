@@ -1,0 +1,28 @@
+[2025-10-04 08:42:02,546] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-04T08:40:43.661752+00:00 [queued]>
+[2025-10-04 08:42:02,550] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-04T08:40:43.661752+00:00 [queued]>
+[2025-10-04 08:42:02,550] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-04 08:42:02,550] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-04 08:42:02,550] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-04 08:42:02,556] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_monitoring> on 2025-10-04 08:40:43.661752+00:00
+[2025-10-04 08:42:02,559] {standard_task_runner.py:52} INFO - Started process 526 to run task
+[2025-10-04 08:42:02,561] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_monitoring', 'manual__2025-10-04T08:40:43.661752+00:00', '--job-id', '868', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpt8p_xnwz', '--error-file', '/tmp/tmpo6jupmut']
+[2025-10-04 08:42:02,561] {standard_task_runner.py:80} INFO - Job 868: Subtask model_monitoring
+[2025-10-04 08:42:02,582] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-04T08:40:43.661752+00:00 [running]> on host 43bde2c75940
+[2025-10-04 08:42:02,611] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-04T08:40:43.661752+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-04T08:40:43.661752+00:00
+[2025-10-04 08:42:02,613] {model_monitoring.py:26} INFO - Loading processed data from /opt/***/data/processed/manga_processed.parquet for monitoring.
+[2025-10-04 08:42:02,705] {model_monitoring.py:28} INFO - Processed data loaded. Shape: (21795, 28)
+[2025-10-04 08:42:02,733] {model_monitoring.py:49} INFO - NaNs in production_data['score'] before prediction: 0
+[2025-10-04 08:42:02,733] {model_monitoring.py:50} INFO - Shape of production_data before prediction: (10897, 28)
+[2025-10-04 08:43:20,806] {model_monitoring.py:64} INFO - Data Drift Report saved to /opt/***/data/monitoring_reports/data_drift_report.html
+[2025-10-04 08:43:20,808] {python.py:173} INFO - Done. Returned value was: None
+[2025-10-04 08:43:20,814] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=model_monitoring, execution_date=20251004T084043, start_date=20251004T084202, end_date=20251004T084320
+[2025-10-04 08:43:20,831] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-04 08:43:20,845] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

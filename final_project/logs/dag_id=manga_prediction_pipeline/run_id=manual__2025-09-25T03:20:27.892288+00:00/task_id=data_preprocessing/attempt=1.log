@@ -1,0 +1,31 @@
+[2025-09-25 03:20:30,698] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T03:20:27.892288+00:00 [queued]>
+[2025-09-25 03:20:30,701] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T03:20:27.892288+00:00 [queued]>
+[2025-09-25 03:20:30,701] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 03:20:30,701] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 03:20:30,701] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 03:20:30,705] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_preprocessing> on 2025-09-25 03:20:27.892288+00:00
+[2025-09-25 03:20:30,707] {standard_task_runner.py:52} INFO - Started process 405 to run task
+[2025-09-25 03:20:30,709] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_preprocessing', 'manual__2025-09-25T03:20:27.892288+00:00', '--job-id', '94', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpjyh74pz8', '--error-file', '/tmp/tmp61oreq1f']
+[2025-09-25 03:20:30,709] {standard_task_runner.py:80} INFO - Job 94: Subtask data_preprocessing
+[2025-09-25 03:20:30,726] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T03:20:27.892288+00:00 [running]> on host ecdfdfa377e2
+[2025-09-25 03:20:30,748] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_preprocessing
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T03:20:27.892288+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T03:20:27.892288+00:00
+[2025-09-25 03:20:30,749] {logging_mixin.py:115} INFO - Reading staged data from /opt/***/data/staged/manga.parquet
+[2025-09-25 03:20:30,831] {logging_mixin.py:115} INFO - Staged data read successfully. Shape: (66371, 26)
+[2025-09-25 03:20:30,832] {logging_mixin.py:115} INFO - Dropping rows with missing scores. Original rows: 66371
+[2025-09-25 03:20:30,839] {logging_mixin.py:115} INFO - Rows after dropping missing scores: 21795
+[2025-09-25 03:20:30,839] {logging_mixin.py:115} INFO - Parsing 'genres' column...
+[2025-09-25 03:20:30,907] {logging_mixin.py:115} INFO - Data preprocessing complete.
+[2025-09-25 03:20:30,907] {logging_mixin.py:115} INFO - Saving processed data to /opt/***/data/processed/manga_processed.parquet
+[2025-09-25 03:20:30,975] {logging_mixin.py:115} INFO - Processed data saved successfully.
+[2025-09-25 03:20:30,978] {python.py:173} INFO - Done. Returned value was: None
+[2025-09-25 03:20:30,983] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=data_preprocessing, execution_date=20250925T032027, start_date=20250925T032030, end_date=20250925T032030
+[2025-09-25 03:20:31,014] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-09-25 03:20:31,029] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,48 @@
+[2025-09-24 19:17:18,116] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-24 19:17:18,118] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-24 19:17:18,119] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-24 19:17:18,119] {taskinstance.py:1357} INFO - Starting attempt 2 of 2
+[2025-09-24 19:17:18,119] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-24 19:17:18,123] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_preprocessing> on 2025-09-24 19:11:06.798026+00:00
+[2025-09-24 19:17:18,125] {standard_task_runner.py:52} INFO - Started process 484 to run task
+[2025-09-24 19:17:18,126] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_preprocessing', 'manual__2025-09-24T19:11:06.798026+00:00', '--job-id', '33', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpt0rq544n', '--error-file', '/tmp/tmpi7jazimr']
+[2025-09-24 19:17:18,126] {standard_task_runner.py:80} INFO - Job 33: Subtask data_preprocessing
+[2025-09-24 19:17:18,144] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-24T19:11:06.798026+00:00 [running]> on host 50bd396892d5
+[2025-09-24 19:17:18,165] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_preprocessing
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-24T19:11:06.798026+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-24T19:11:06.798026+00:00
+[2025-09-24 19:17:18,166] {logging_mixin.py:115} INFO - Reading staged data from /opt/***/data/staged/manga.parquet
+[2025-09-24 19:17:18,279] {logging_mixin.py:115} INFO - Staged data read successfully. Shape: (66371, 26)
+[2025-09-24 19:17:18,279] {logging_mixin.py:115} INFO - Dropping rows with missing scores. Original rows: 66371
+[2025-09-24 19:17:18,287] {logging_mixin.py:115} INFO - Rows after dropping missing scores: 21795
+[2025-09-24 19:17:18,287] {logging_mixin.py:115} INFO - Parsing 'genres' column...
+[2025-09-24 19:17:18,287] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/data_preprocessing.py", line 28, in preprocess_data
+    df['genres'] = df['genres'].apply(lambda x: [g['name'] for g in ast.literal_eval(x)] if isinstance(x, str) and x.startswith('[') else [])
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/series.py", line 4357, in apply
+    return SeriesApply(self, func, convert_dtype, args, kwargs).apply()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1043, in apply
+    return self.apply_standard()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/apply.py", line 1101, in apply_standard
+    convert=self.convert_dtype,
+  File "pandas/_libs/lib.pyx", line 2859, in pandas._libs.lib.map_infer
+  File "/opt/airflow/src/data_preprocessing.py", line 28, in <lambda>
+    df['genres'] = df['genres'].apply(lambda x: [g['name'] for g in ast.literal_eval(x)] if isinstance(x, str) and x.startswith('[') else [])
+  File "/opt/airflow/src/data_preprocessing.py", line 28, in <listcomp>
+    df['genres'] = df['genres'].apply(lambda x: [g['name'] for g in ast.literal_eval(x)] if isinstance(x, str) and x.startswith('[') else [])
+TypeError: string indices must be integers
+[2025-09-24 19:17:18,292] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=data_preprocessing, execution_date=20250924T191106, start_date=20250924T191718, end_date=20250924T191718
+[2025-09-24 19:17:18,296] {standard_task_runner.py:97} ERROR - Failed to execute job 33 for task data_preprocessing (string indices must be integers; 484)
+[2025-09-24 19:17:18,307] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-09-24 19:17:18,321] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

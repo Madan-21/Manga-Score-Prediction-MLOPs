@@ -1,0 +1,24 @@
+[2025-10-02 02:51:35,203] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.start_pipeline manual__2025-10-02T02:51:33.170859+00:00 [queued]>
+[2025-10-02 02:51:35,206] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.start_pipeline manual__2025-10-02T02:51:33.170859+00:00 [queued]>
+[2025-10-02 02:51:35,206] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 02:51:35,206] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-02 02:51:35,206] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 02:51:35,210] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): start_pipeline> on 2025-10-02 02:51:33.170859+00:00
+[2025-10-02 02:51:35,213] {standard_task_runner.py:52} INFO - Started process 200 to run task
+[2025-10-02 02:51:35,215] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'start_pipeline', 'manual__2025-10-02T02:51:33.170859+00:00', '--job-id', '569', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp85a7v140', '--error-file', '/tmp/tmpa22nwlpx']
+[2025-10-02 02:51:35,216] {standard_task_runner.py:80} INFO - Job 569: Subtask start_pipeline
+[2025-10-02 02:51:35,245] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.start_pipeline manual__2025-10-02T02:51:33.170859+00:00 [running]> on host 1166204b357a
+[2025-10-02 02:51:35,276] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=start_pipeline
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-02T02:51:33.170859+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-02T02:51:33.170859+00:00
+[2025-10-02 02:51:35,277] {logging_mixin.py:115} INFO - Pipeline started!
+[2025-10-02 02:51:35,277] {python.py:173} INFO - Done. Returned value was: None
+[2025-10-02 02:51:35,281] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=start_pipeline, execution_date=20251002T025133, start_date=20251002T025135, end_date=20251002T025135
+[2025-10-02 02:51:35,313] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-02 02:51:35,333] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

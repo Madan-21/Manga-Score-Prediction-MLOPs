@@ -1,0 +1,130 @@
+[2025-10-05 01:49:26,494] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-05T01:48:18.586716+00:00 [queued]>
+[2025-10-05 01:49:26,497] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-05T01:48:18.586716+00:00 [queued]>
+[2025-10-05 01:49:26,497] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-05 01:49:26,497] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-05 01:49:26,497] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-05 01:49:26,502] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_training> on 2025-10-05 01:48:18.586716+00:00
+[2025-10-05 01:49:26,505] {standard_task_runner.py:52} INFO - Started process 287 to run task
+[2025-10-05 01:49:26,507] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_training', 'manual__2025-10-05T01:48:18.586716+00:00', '--job-id', '918', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmphpwfl7_u', '--error-file', '/tmp/tmp39jvqthw']
+[2025-10-05 01:49:26,507] {standard_task_runner.py:80} INFO - Job 918: Subtask model_training
+[2025-10-05 01:49:26,526] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-05T01:48:18.586716+00:00 [running]> on host 11dccea03661
+[2025-10-05 01:49:26,551] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_training
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-05T01:48:18.586716+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-05T01:48:18.586716+00:00
+[2025-10-05 01:49:26,552] {logging_mixin.py:115} INFO - --- Starting model training ---
+[2025-10-05 01:49:26,552] {logging_mixin.py:115} INFO - Reading feature-engineered data from /opt/***/data/processed/manga_processed.parquet
+[2025-10-05 01:49:26,596] {logging_mixin.py:115} INFO - Feature-engineered data read successfully. Shape: (21795, 28)
+[2025-10-05 01:49:26,601] {logging_mixin.py:115} INFO - Splitting data into training and testing sets...
+[2025-10-05 01:49:26,602] {logging_mixin.py:115} INFO - X_train shape: (17436, 9), X_test shape: (4359, 9)
+[2025-10-05 01:49:26,603] {logging_mixin.py:115} INFO - MLflow Tracking URI: http://mlflow:5000
+[2025-10-05 01:49:26,616] {connectionpool.py:811} WARNING - Retrying (Retry(total=4, connect=4, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff67593210>: Failed to establish a new connection: [Errno -2] Name or service not known')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction
+[2025-10-05 01:49:30,624] {connectionpool.py:811} WARNING - Retrying (Retry(total=3, connect=3, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff675f8990>: Failed to establish a new connection: [Errno -2] Name or service not known')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction
+[2025-10-05 01:49:38,648] {connectionpool.py:811} WARNING - Retrying (Retry(total=2, connect=2, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff675f8dd0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction
+[2025-10-05 01:49:54,679] {connectionpool.py:811} WARNING - Retrying (Retry(total=1, connect=1, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758e3d0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction
+[2025-10-05 01:50:26,724] {connectionpool.py:811} WARNING - Retrying (Retry(total=0, connect=0, read=5, redirect=5, status=5)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758e610>: Failed to establish a new connection: [Errno -2] Name or service not known')': /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction
+[2025-10-05 01:50:26,736] {logging_mixin.py:115} INFO - An error occurred during model training: API request to http://mlflow:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-10-05 01:50:26,736] {logging_mixin.py:115} INFO - --- Model training finished ---
+[2025-10-05 01:50:26,738] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 175, in _new_conn
+    (self._dns_host, self.port), self.timeout, **extra_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/local/lib/python3.7/socket.py", line 752, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 710, in urlopen
+    chunked=chunked,
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "/usr/local/lib/python3.7/http/client.py", line 1281, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1327, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1276, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.7/http/client.py", line 1036, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.7/http/client.py", line 976, in send
+    self.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connection.py", line 187, in _new_conn
+    self, "Failed to establish a new connection: %s" % e
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 450, in send
+    timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 826, in urlopen
+    **response_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 826, in urlopen
+    **response_kw
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 826, in urlopen
+    **response_kw
+  [Previous line repeated 2 more times]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/connectionpool.py", line 786, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/home/airflow/.local/lib/python3.7/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/rest_utils.py", line 175, in http_request
+    **kwargs,
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/rest_utils.py", line 97, in _get_http_response_with_retries
+    return session.request(method, url, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/model_training.py", line 47, in model_training
+    mlflow.set_experiment("manga_prediction")
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/tracking/fluent.py", line 114, in set_experiment
+    experiment = client.get_experiment_by_name(experiment_name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/tracking/client.py", line 585, in get_experiment_by_name
+    return self._tracking_client.get_experiment_by_name(name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/tracking/_tracking_service/client.py", line 241, in get_experiment_by_name
+    return self.store.get_experiment_by_name(name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/store/tracking/rest_store.py", line 332, in get_experiment_by_name
+    raise e
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/store/tracking/rest_store.py", line 319, in get_experiment_by_name
+    response_proto = self._call_endpoint(GetExperimentByName, req_body)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/store/tracking/rest_store.py", line 57, in _call_endpoint
+    return call_endpoint(self.get_host_creds(), endpoint, method, json_body, response_proto)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/rest_utils.py", line 274, in call_endpoint
+    host_creds=host_creds, endpoint=endpoint, method=method, params=json_body
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/rest_utils.py", line 184, in http_request
+    raise MlflowException("API request to %s failed with exception %s" % (url, e))
+mlflow.exceptions.MlflowException: API request to http://mlflow:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+[2025-10-05 01:50:26,760] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=model_training, execution_date=20251005T014818, start_date=20251005T014926, end_date=20251005T015026
+[2025-10-05 01:50:26,772] {standard_task_runner.py:97} ERROR - Failed to execute job 918 for task model_training (API request to http://mlflow:5000/api/2.0/mlflow/experiments/get-by-name failed with exception HTTPConnectionPool(host='mlflow', port=5000): Max retries exceeded with url: /api/2.0/mlflow/experiments/get-by-name?experiment_name=manga_prediction (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffff6758ee10>: Failed to establish a new connection: [Errno -2] Name or service not known')); 287)
+[2025-10-05 01:50:26,796] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-10-05 01:50:26,815] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

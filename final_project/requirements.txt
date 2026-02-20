@@ -1,0 +1,16 @@
+pandas
+pyarrow
+scikit-learn==1.0.2
+mlflow
+mysql-connector-python
+SQLAlchemy
+fastapi
+uvicorn
+cloudpickle==2.1.0
+dill==0.3.1.1
+psutil==5.9.1
+evidently
+pydantic==1.10.13
+matplotlib
+seaborn
+pymysql

@@ -1,0 +1,45 @@
+[2025-10-02 01:48:30,123] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-02T01:47:13.033341+00:00 [queued]>
+[2025-10-02 01:48:30,126] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-02T01:47:13.033341+00:00 [queued]>
+[2025-10-02 01:48:30,126] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 01:48:30,127] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-02 01:48:30,127] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 01:48:30,131] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_monitoring> on 2025-10-02 01:47:13.033341+00:00
+[2025-10-02 01:48:30,135] {standard_task_runner.py:52} INFO - Started process 319 to run task
+[2025-10-02 01:48:30,141] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_monitoring', 'manual__2025-10-02T01:47:13.033341+00:00', '--job-id', '536', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmphm87bz2m', '--error-file', '/tmp/tmpkwhdvibr']
+[2025-10-02 01:48:30,142] {standard_task_runner.py:80} INFO - Job 536: Subtask model_monitoring
+[2025-10-02 01:48:30,163] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-02T01:47:13.033341+00:00 [running]> on host b78234d7a16b
+[2025-10-02 01:48:30,187] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-02T01:47:13.033341+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-02T01:47:13.033341+00:00
+[2025-10-02 01:48:30,187] {model_monitoring.py:22} INFO - Loading processed data from /opt/***/data/processed/manga_processed.parquet for monitoring.
+[2025-10-02 01:48:30,245] {model_monitoring.py:24} INFO - Processed data loaded. Shape: (21795, 28)
+[2025-10-02 01:49:49,559] {model_monitoring.py:59} INFO - Data Drift Report saved to /opt/***/data/monitoring_reports/data_drift_report.html
+[2025-10-02 01:49:49,561] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/manga_prediction_pipeline.py", line 41, in _run_model_monitoring
+    run_model_monitoring()
+  File "/opt/airflow/src/model_monitoring.py", line 82, in run_model_monitoring
+    column_mapping=regression_column_mapping)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/report/report.py", line 99, in run
+    column_mapping,
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/calculation_engine/python_engine.py", line 45, in get_data_definition
+    return create_data_definition(reference_data, current_data, column_mapping)
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/utils/data_preprocessing.py", line 331, in create_data_definition
+    mapping,
+  File "/home/airflow/.local/lib/python3.7/site-packages/evidently/utils/data_preprocessing.py", line 199, in _prediction_column
+    raise ValueError(f"Prediction column ({prediction}) is partially present in data")
+ValueError: Prediction column (prediction) is partially present in data
+[2025-10-02 01:49:49,569] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=model_monitoring, execution_date=20251002T014713, start_date=20251002T014830, end_date=20251002T014949
+[2025-10-02 01:49:49,575] {standard_task_runner.py:97} ERROR - Failed to execute job 536 for task model_monitoring (Prediction column (prediction) is partially present in data; 319)
+[2025-10-02 01:49:49,621] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-10-02 01:49:49,638] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

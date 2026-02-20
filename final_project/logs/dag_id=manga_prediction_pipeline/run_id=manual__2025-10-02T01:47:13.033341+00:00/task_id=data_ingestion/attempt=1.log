@@ -1,0 +1,45 @@
+[2025-10-02 01:47:17,848] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_ingestion manual__2025-10-02T01:47:13.033341+00:00 [queued]>
+[2025-10-02 01:47:17,851] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_ingestion manual__2025-10-02T01:47:13.033341+00:00 [queued]>
+[2025-10-02 01:47:17,851] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 01:47:17,851] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-02 01:47:17,851] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 01:47:17,855] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_ingestion> on 2025-10-02 01:47:13.033341+00:00
+[2025-10-02 01:47:17,858] {standard_task_runner.py:52} INFO - Started process 201 to run task
+[2025-10-02 01:47:17,859] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_ingestion', 'manual__2025-10-02T01:47:13.033341+00:00', '--job-id', '530', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpsu7zmuf_', '--error-file', '/tmp/tmp1b4srl4w']
+[2025-10-02 01:47:17,860] {standard_task_runner.py:80} INFO - Job 530: Subtask data_ingestion
+[2025-10-02 01:47:17,879] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_ingestion manual__2025-10-02T01:47:13.033341+00:00 [running]> on host b78234d7a16b
+[2025-10-02 01:47:17,903] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_ingestion
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-02T01:47:13.033341+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-02T01:47:13.033341+00:00
+[2025-10-02 01:47:17,904] {logging_mixin.py:115} INFO - Reading data from /opt/***/data/manga.csv
+[2025-10-02 01:47:18,279] {logging_mixin.py:115} INFO - Data read successfully. Shape: (66371, 26)
+[2025-10-02 01:47:18,280] {logging_mixin.py:115} INFO - Attempting to connect to MariaDB at mariadb:3306/manga_db
+[2025-10-02 01:47:18,303] {authentication.py:66} INFO - package: mysql.connector.plugins
+[2025-10-02 01:47:18,304] {authentication.py:67} INFO - plugin_name: mysql_native_password
+[2025-10-02 01:47:18,304] {authentication.py:71} INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+[2025-10-02 01:47:18,307] {logging_mixin.py:115} INFO - Successfully connected to MariaDB.
+[2025-10-02 01:47:18,307] {logging_mixin.py:115} INFO - Inserting into dim_manga_info...
+[2025-10-02 01:47:46,343] {logging_mixin.py:115} INFO - dim_manga_info populated.
+[2025-10-02 01:47:46,580] {logging_mixin.py:115} INFO - Inserting into dim_genres...
+[2025-10-02 01:47:46,674] {logging_mixin.py:115} INFO - dim_genres populated.
+[2025-10-02 01:47:46,675] {logging_mixin.py:115} INFO - Inserting into dim_authors...
+[2025-10-02 01:47:46,832] {logging_mixin.py:115} INFO - dim_authors populated.
+[2025-10-02 01:47:46,834] {logging_mixin.py:115} INFO - Inserting into dim_demographics...
+[2025-10-02 01:47:46,976] {logging_mixin.py:115} INFO - dim_demographics populated.
+[2025-10-02 01:47:46,978] {logging_mixin.py:115} INFO - Inserting into dim_serializations...
+[2025-10-02 01:47:47,078] {logging_mixin.py:115} INFO - dim_serializations populated.
+[2025-10-02 01:47:47,079] {logging_mixin.py:115} INFO - Inserting into fact_manga...
+[2025-10-02 01:48:13,605] {logging_mixin.py:115} INFO - fact_manga populated.
+[2025-10-02 01:48:13,605] {logging_mixin.py:115} INFO - Inserting into manga_secondary_genres...
+[2025-10-02 01:48:14,929] {logging_mixin.py:115} INFO - manga_secondary_genres populated.
+[2025-10-02 01:48:14,929] {logging_mixin.py:115} INFO - Data ingestion to MariaDB complete.
+[2025-10-02 01:48:14,957] {python.py:173} INFO - Done. Returned value was: None
+[2025-10-02 01:48:14,970] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=data_ingestion, execution_date=20251002T014713, start_date=20251002T014717, end_date=20251002T014814
+[2025-10-02 01:48:14,998] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-02 01:48:15,022] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,33 @@
+[2025-10-03 02:52:33,024] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_model_monitoring_pipeline.run_model_monitoring scheduled__2025-10-02T00:00:00+00:00 [queued]>
+[2025-10-03 02:52:33,030] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_model_monitoring_pipeline.run_model_monitoring scheduled__2025-10-02T00:00:00+00:00 [queued]>
+[2025-10-03 02:52:33,030] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 02:52:33,030] {taskinstance.py:1357} INFO - Starting attempt 2 of 1
+[2025-10-03 02:52:33,030] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 02:52:33,039] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): run_model_monitoring> on 2025-10-02 00:00:00+00:00
+[2025-10-03 02:52:33,046] {standard_task_runner.py:52} INFO - Started process 609 to run task
+[2025-10-03 02:52:33,049] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_model_monitoring_pipeline', 'run_model_monitoring', 'scheduled__2025-10-02T00:00:00+00:00', '--job-id', '606', '--raw', '--subdir', 'DAGS_FOLDER/manga_model_monitoring_dag.py', '--cfg-path', '/tmp/tmp9d0e6_lh', '--error-file', '/tmp/tmp6fnfxa7c']
+[2025-10-03 02:52:33,050] {standard_task_runner.py:80} INFO - Job 606: Subtask run_model_monitoring
+[2025-10-03 02:52:33,065] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:525 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-03 02:52:33,094] {task_command.py:370} INFO - Running <TaskInstance: manga_model_monitoring_pipeline.run_model_monitoring scheduled__2025-10-02T00:00:00+00:00 [running]> on host 7666b3210b0a
+[2025-10-03 02:52:33,147] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_model_monitoring_pipeline
+AIRFLOW_CTX_TASK_ID=run_model_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-02T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-10-02T00:00:00+00:00
+[2025-10-03 02:52:33,148] {model_monitoring.py:26} INFO - Loading processed data from /opt/***/data/processed/manga_processed.parquet for monitoring.
+[2025-10-03 02:52:33,293] {model_monitoring.py:28} INFO - Processed data loaded. Shape: (21795, 28)
+[2025-10-03 02:52:33,372] {model_monitoring.py:49} INFO - NaNs in production_data['score'] before prediction: 0
+[2025-10-03 02:52:33,373] {model_monitoring.py:50} INFO - Shape of production_data before prediction: (10897, 28)
+[2025-10-03 03:52:43,425] {local_task_job.py:221} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-10-03 03:52:43,429] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 609. PIDs of all processes in the group: [609]
+[2025-10-03 03:52:43,430] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 609
+[2025-10-03 03:52:43,430] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-10-03 04:38:17,044] {process_utils.py:143} WARNING - process psutil.Process(pid=609, name='airflow task ru', status='running', started='02:52:32') did not respond to SIGTERM. Trying SIGKILL
+[2025-10-03 04:38:17,051] {process_utils.py:80} INFO - Sending the signal Signals.SIGKILL to group 609
+[2025-10-03 04:38:17,118] {process_utils.py:75} INFO - Process psutil.Process(pid=609, name='airflow task ru', status='terminated', exitcode=<Negsignal.SIGKILL: -9>, started='02:52:32') (609) terminated with exit code Negsignal.SIGKILL
+[2025-10-03 04:38:17,119] {standard_task_runner.py:162} ERROR - Job 606 was killed before it finished (likely due to running out of memory)
+[2025-10-03 04:38:17,120] {local_task_job.py:144} ERROR - Heartbeat time limit exceeded!

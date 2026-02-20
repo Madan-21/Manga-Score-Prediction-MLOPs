@@ -1,0 +1,25 @@
+[2025-10-02 03:10:48,901] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_model_monitoring_pipeline.start_monitoring scheduled__2025-10-01T00:00:00+00:00 [queued]>
+[2025-10-02 03:10:48,904] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_model_monitoring_pipeline.start_monitoring scheduled__2025-10-01T00:00:00+00:00 [queued]>
+[2025-10-02 03:10:48,904] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 03:10:48,904] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-02 03:10:48,904] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-02 03:10:48,908] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): start_monitoring> on 2025-10-01 00:00:00+00:00
+[2025-10-02 03:10:48,911] {standard_task_runner.py:52} INFO - Started process 198 to run task
+[2025-10-02 03:10:48,913] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_model_monitoring_pipeline', 'start_monitoring', 'scheduled__2025-10-01T00:00:00+00:00', '--job-id', '600', '--raw', '--subdir', 'DAGS_FOLDER/manga_model_monitoring_dag.py', '--cfg-path', '/tmp/tmpgq9zz05f', '--error-file', '/tmp/tmps47c_7r7']
+[2025-10-02 03:10:48,913] {standard_task_runner.py:80} INFO - Job 600: Subtask start_monitoring
+[2025-10-02 03:10:48,930] {logging_mixin.py:115} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:525 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-10-02 03:10:48,945] {task_command.py:370} INFO - Running <TaskInstance: manga_model_monitoring_pipeline.start_monitoring scheduled__2025-10-01T00:00:00+00:00 [running]> on host 7666b3210b0a
+[2025-10-02 03:10:48,976] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_model_monitoring_pipeline
+AIRFLOW_CTX_TASK_ID=start_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-01T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2025-10-01T00:00:00+00:00
+[2025-10-02 03:10:48,976] {logging_mixin.py:115} INFO - Model monitoring pipeline started!
+[2025-10-02 03:10:48,976] {python.py:173} INFO - Done. Returned value was: None
+[2025-10-02 03:10:48,981] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_model_monitoring_pipeline, task_id=start_monitoring, execution_date=20251001T000000, start_date=20251002T031048, end_date=20251002T031048
+[2025-10-02 03:10:49,013] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-02 03:10:49,029] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

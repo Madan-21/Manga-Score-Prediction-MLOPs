@@ -1,0 +1,15 @@
+artifact_uri: file:///mlflow_data/artifacts/491280676728614918/233eaa35519e4106a6c9bb62393e5023/artifacts
+end_time: 1759628413935
+entry_point_name: ''
+experiment_id: '491280676728614918'
+lifecycle_stage: active
+run_id: 233eaa35519e4106a6c9bb62393e5023
+run_name: RandomForest_Manga_Prediction
+run_uuid: 233eaa35519e4106a6c9bb62393e5023
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759628409072
+status: 3
+tags: []
+user_id: airflow

@@ -1,0 +1,34 @@
+[2025-10-01 17:57:02,381] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_score_prediction.initializing_docker manual__2025-10-01T17:57:02.192469+00:00 [queued]>
+[2025-10-01 17:57:02,383] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_score_prediction.initializing_docker manual__2025-10-01T17:57:02.192469+00:00 [queued]>
+[2025-10-01 17:57:02,384] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 17:57:02,384] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-01 17:57:02,384] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-01 17:57:02,388] {taskinstance.py:1377} INFO - Executing <Task(BashOperator): initializing_docker> on 2025-10-01 17:57:02.192469+00:00
+[2025-10-01 17:57:02,390] {standard_task_runner.py:52} INFO - Started process 3034 to run task
+[2025-10-01 17:57:02,391] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_score_prediction', 'initializing_docker', 'manual__2025-10-01T17:57:02.192469+00:00', '--job-id', '415', '--raw', '--subdir', 'DAGS_FOLDER/manga_score_prediction_dag.py', '--cfg-path', '/tmp/tmp9teybwmn', '--error-file', '/tmp/tmp9liop1xi']
+[2025-10-01 17:57:02,392] {standard_task_runner.py:80} INFO - Job 415: Subtask initializing_docker
+[2025-10-01 17:57:02,411] {task_command.py:370} INFO - Running <TaskInstance: manga_score_prediction.initializing_docker manual__2025-10-01T17:57:02.192469+00:00 [running]> on host 61d50ce4b953
+[2025-10-01 17:57:02,435] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_score_prediction
+AIRFLOW_CTX_TASK_ID=initializing_docker
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-01T17:57:02.192469+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-01T17:57:02.192469+00:00
+[2025-10-01 17:57:02,436] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2025-10-01 17:57:02,436] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'docker start admin']
+[2025-10-01 17:57:02,439] {subprocess.py:85} INFO - Output:
+[2025-10-01 17:57:02,440] {subprocess.py:92} INFO - bash: line 1: docker: command not found
+[2025-10-01 17:57:02,440] {subprocess.py:96} INFO - Command exited with return code 127
+[2025-10-01 17:57:02,445] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/bash.py", line 195, in execute
+    f'Bash command failed. The command returned a non-zero exit code {result.exit_code}.'
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 127.
+[2025-10-01 17:57:02,446] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_score_prediction, task_id=initializing_docker, execution_date=20251001T175702, start_date=20251001T175702, end_date=20251001T175702
+[2025-10-01 17:57:02,451] {standard_task_runner.py:97} ERROR - Failed to execute job 415 for task initializing_docker (Bash command failed. The command returned a non-zero exit code 127.; 3034)
+[2025-10-01 17:57:02,489] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-10-01 17:57:02,505] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

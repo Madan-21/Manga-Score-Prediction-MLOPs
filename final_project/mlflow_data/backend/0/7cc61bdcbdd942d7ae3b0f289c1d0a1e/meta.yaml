@@ -1,0 +1,15 @@
+artifact_uri: file:///mlflow_data/artifacts/0/7cc61bdcbdd942d7ae3b0f289c1d0a1e/artifacts
+end_time: 1759761673735
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7cc61bdcbdd942d7ae3b0f289c1d0a1e
+run_name: capricious-hog-327
+run_uuid: 7cc61bdcbdd942d7ae3b0f289c1d0a1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1759761673697
+status: 3
+tags: []
+user_id: airflow

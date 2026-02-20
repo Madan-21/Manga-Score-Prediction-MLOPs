@@ -1,0 +1,63 @@
+[2025-09-25 10:53:22,640] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-09-25T10:52:20+00:00 [queued]>
+[2025-09-25 10:53:22,643] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-09-25T10:52:20+00:00 [queued]>
+[2025-09-25 10:53:22,643] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:53:22,643] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 10:53:22,643] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:53:22,648] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_training> on 2025-09-25 10:52:20+00:00
+[2025-09-25 10:53:22,650] {standard_task_runner.py:52} INFO - Started process 1127 to run task
+[2025-09-25 10:53:22,651] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_training', 'manual__2025-09-25T10:52:20+00:00', '--job-id', '293', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpqqgm__lt', '--error-file', '/tmp/tmp3x7lbicb']
+[2025-09-25 10:53:22,652] {standard_task_runner.py:80} INFO - Job 293: Subtask model_training
+[2025-09-25 10:53:22,668] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_training manual__2025-09-25T10:52:20+00:00 [running]> on host 19d9b7ffabd0
+[2025-09-25 10:53:22,692] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_training
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T10:52:20+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T10:52:20+00:00
+[2025-09-25 10:53:22,692] {logging_mixin.py:115} INFO - Reading feature-engineered data from /opt/***/data/processed/manga_processed.parquet
+[2025-09-25 10:53:22,731] {logging_mixin.py:115} INFO - Feature-engineered data read successfully. Shape: (21795, 28)
+[2025-09-25 10:53:22,733] {logging_mixin.py:115} INFO - Splitting data into training and testing sets...
+[2025-09-25 10:53:22,734] {logging_mixin.py:115} INFO - X_train shape: (17436, 9), X_test shape: (4359, 9)
+[2025-09-25 10:53:22,774] {logging_mixin.py:115} WARNING - 2025/09/25 10:53:22 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-09-25 10:53:22,803] {logging_mixin.py:115} INFO - Training Random Forest Regressor model...
+[2025-09-25 10:53:22,808] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/model_training.py", line 46, in model_training
+    model.fit(X_train, y_train)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/ensemble/_forest.py", line 328, in fit
+    X, y, multi_output=True, accept_sparse="csc", dtype=DTYPE
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/base.py", line 581, in _validate_data
+    X, y = check_X_y(X, y, **check_params)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/validation.py", line 976, in check_X_y
+    estimator=estimator,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/validation.py", line 800, in check_array
+    _assert_all_finite(array, allow_nan=force_all_finite == "allow-nan")
+  File "/home/airflow/.local/lib/python3.7/site-packages/sklearn/utils/validation.py", line 116, in _assert_all_finite
+    type_err, msg_dtype if msg_dtype is not None else X.dtype
+ValueError: Input contains NaN, infinity or a value too large for dtype('float32').
+[2025-09-25 10:53:22,812] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=model_training, execution_date=20250925T105220, start_date=20250925T105322, end_date=20250925T105322
+[2025-09-25 10:53:22,816] {standard_task_runner.py:97} ERROR - Failed to execute job 293 for task model_training (Input contains NaN, infinity or a value too large for dtype('float32').; 1127)
+[2025-09-25 10:53:22,831] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-09-25 10:53:22,845] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

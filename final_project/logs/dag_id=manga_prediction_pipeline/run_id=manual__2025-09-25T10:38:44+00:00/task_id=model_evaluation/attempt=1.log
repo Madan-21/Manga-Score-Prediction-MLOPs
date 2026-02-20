@@ -1,0 +1,49 @@
+[2025-09-25 10:39:50,332] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T10:38:44+00:00 [queued]>
+[2025-09-25 10:39:50,335] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T10:38:44+00:00 [queued]>
+[2025-09-25 10:39:50,335] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:39:50,335] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 10:39:50,336] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:39:50,340] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_evaluation> on 2025-09-25 10:38:44+00:00
+[2025-09-25 10:39:50,342] {standard_task_runner.py:52} INFO - Started process 766 to run task
+[2025-09-25 10:39:50,343] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_evaluation', 'manual__2025-09-25T10:38:44+00:00', '--job-id', '275', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp7dx5jta0', '--error-file', '/tmp/tmppbrh03u4']
+[2025-09-25 10:39:50,344] {standard_task_runner.py:80} INFO - Job 275: Subtask model_evaluation
+[2025-09-25 10:39:50,361] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T10:38:44+00:00 [running]> on host 19d9b7ffabd0
+[2025-09-25 10:39:50,384] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_evaluation
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T10:38:44+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T10:38:44+00:00
+[2025-09-25 10:39:50,387] {logging_mixin.py:115} INFO - Reading feature-engineered data from /opt/***/data/features/manga_features.parquet for evaluation split
+[2025-09-25 10:39:50,427] {logging_mixin.py:115} INFO - X_test shape: (3128, 11), y_test shape: (3128,)
+[2025-09-25 10:39:50,461] {logging_mixin.py:115} WARNING - 2025/09/25 10:39:50 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-09-25 10:39:50,477] {logging_mixin.py:115} INFO - Loading model from MLflow URI: runs:/e7e2824141f74fb7864c07f5fb384f69/random_forest_model
+[2025-09-25 10:39:50,581] {logging_mixin.py:115} INFO - Model loaded successfully.
+[2025-09-25 10:39:50,627] {logging_mixin.py:115} INFO - Evaluation Metrics:
+[2025-09-25 10:39:50,627] {logging_mixin.py:115} INFO -   MAE: 0.2501
+[2025-09-25 10:39:50,627] {logging_mixin.py:115} INFO -   MSE: 0.1081
+[2025-09-25 10:39:50,627] {logging_mixin.py:115} INFO -   RMSE: 0.3288
+[2025-09-25 10:39:50,627] {logging_mixin.py:115} INFO -   R2 Score: 0.5307
+[2025-09-25 10:39:50,639] {logging_mixin.py:115} INFO - Evaluation metrics logged to MLflow.
+[2025-09-25 10:39:50,647] {python.py:173} INFO - Done. Returned value was: None
+[2025-09-25 10:39:50,653] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=model_evaluation, execution_date=20250925T103844, start_date=20250925T103950, end_date=20250925T103950
+[2025-09-25 10:39:50,693] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-09-25 10:39:50,706] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,6 @@
+artifact_location: file:///mlflow_data/artifacts/491280676728614918
+creation_time: 1758770389502
+experiment_id: '491280676728614918'
+last_update_time: 1758770389502
+lifecycle_stage: active
+name: manga_prediction

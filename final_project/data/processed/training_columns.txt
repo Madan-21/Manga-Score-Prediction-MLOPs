@@ -1,0 +1,1 @@
+['manga_info_id', 'mal_id', 'publishing', 'approved', 'scored_by', 'members', 'favorites', 'volumes', 'chapters']

@@ -1,0 +1,50 @@
+[2025-10-03 17:38:58,535] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-03T17:37:47.747489+00:00 [queued]>
+[2025-10-03 17:38:58,538] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-03T17:37:47.747489+00:00 [queued]>
+[2025-10-03 17:38:58,538] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 17:38:58,538] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-03 17:38:58,538] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 17:38:58,543] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_training> on 2025-10-03 17:37:47.747489+00:00
+[2025-10-03 17:38:58,545] {standard_task_runner.py:52} INFO - Started process 267 to run task
+[2025-10-03 17:38:58,547] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_training', 'manual__2025-10-03T17:37:47.747489+00:00', '--job-id', '702', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp607h_mb6', '--error-file', '/tmp/tmp10siceo8']
+[2025-10-03 17:38:58,547] {standard_task_runner.py:80} INFO - Job 702: Subtask model_training
+[2025-10-03 17:38:58,567] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_training manual__2025-10-03T17:37:47.747489+00:00 [running]> on host 3718d431fdfc
+[2025-10-03 17:38:58,591] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_training
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-03T17:37:47.747489+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-03T17:37:47.747489+00:00
+[2025-10-03 17:38:58,592] {logging_mixin.py:115} INFO - Reading feature-engineered data from /opt/***/data/processed/manga_processed.parquet
+[2025-10-03 17:38:58,635] {logging_mixin.py:115} INFO - Feature-engineered data read successfully. Shape: (21795, 28)
+[2025-10-03 17:38:58,639] {logging_mixin.py:115} INFO - Splitting data into training and testing sets...
+[2025-10-03 17:38:58,641] {logging_mixin.py:115} INFO - X_train shape: (17436, 9), X_test shape: (4359, 9)
+[2025-10-03 17:38:58,691] {logging_mixin.py:115} WARNING - 2025/10/03 17:38:58 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-10-03 17:38:58,717] {logging_mixin.py:115} INFO - Training Random Forest Regressor model...
+[2025-10-03 17:39:02,163] {logging_mixin.py:115} INFO - Model training complete.
+[2025-10-03 17:39:02,219] {logging_mixin.py:115} INFO - MAE: 0.0108
+[2025-10-03 17:39:02,219] {logging_mixin.py:115} INFO - MSE: 0.0020
+[2025-10-03 17:39:02,219] {logging_mixin.py:115} INFO - RMSE: 0.0445
+[2025-10-03 17:39:02,219] {logging_mixin.py:115} INFO - R2 Score: 0.9923
+[2025-10-03 17:39:04,083] {logging_mixin.py:115} INFO - Model and metrics logged to MLflow.
+[2025-10-03 17:39:04,094] {python.py:173} INFO - Done. Returned value was: 0d90d7a5c6b94000bb78653138821dd9
+[2025-10-03 17:39:04,111] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=model_training, execution_date=20251003T173747, start_date=20251003T173858, end_date=20251003T173904
+[2025-10-03 17:39:04,161] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-03 17:39:04,181] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

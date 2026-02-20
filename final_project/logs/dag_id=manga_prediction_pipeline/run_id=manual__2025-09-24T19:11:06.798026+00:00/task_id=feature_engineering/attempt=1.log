@@ -1,0 +1,30 @@
+[2025-09-25 08:06:28,682] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-25 08:06:28,686] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-24T19:11:06.798026+00:00 [queued]>
+[2025-09-25 08:06:28,686] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 08:06:28,686] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 08:06:28,686] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 08:06:28,691] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): feature_engineering> on 2025-09-24 19:11:06.798026+00:00
+[2025-09-25 08:06:28,693] {standard_task_runner.py:52} INFO - Started process 775 to run task
+[2025-09-25 08:06:28,695] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'feature_engineering', 'manual__2025-09-24T19:11:06.798026+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmp0ks4sgk6', '--error-file', '/tmp/tmpe1sl4wx8']
+[2025-09-25 08:06:28,695] {standard_task_runner.py:80} INFO - Job 146: Subtask feature_engineering
+[2025-09-25 08:06:28,714] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-24T19:11:06.798026+00:00 [running]> on host 240518fe472e
+[2025-09-25 08:06:28,741] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=feature_engineering
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-24T19:11:06.798026+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-24T19:11:06.798026+00:00
+[2025-09-25 08:06:28,741] {logging_mixin.py:115} INFO - Reading processed data from /opt/***/data/processed/manga_processed.parquet
+[2025-09-25 08:06:28,799] {logging_mixin.py:115} INFO - Processed data read successfully. Shape: (21795, 26)
+[2025-09-25 08:06:28,805] {logging_mixin.py:115} INFO - Scaling numerical columns: ['members', 'favorites', 'scored_by', 'volumes', 'chapters']
+[2025-09-25 08:06:28,807] {logging_mixin.py:115} INFO - One-hot encoding categorical columns: ['type']
+[2025-09-25 08:06:28,814] {logging_mixin.py:115} INFO - Feature engineering complete.
+[2025-09-25 08:06:28,814] {logging_mixin.py:115} INFO - Saving features to /opt/***/data/features/manga_features.parquet
+[2025-09-25 08:06:28,872] {logging_mixin.py:115} INFO - Features saved successfully.
+[2025-09-25 08:06:28,875] {python.py:173} INFO - Done. Returned value was: None
+[2025-09-25 08:06:28,881] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=feature_engineering, execution_date=20250924T191106, start_date=20250925T080628, end_date=20250925T080628
+[2025-09-25 08:06:28,919] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-09-25 08:06:28,936] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

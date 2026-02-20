@@ -1,0 +1,27 @@
+[2025-10-03 18:21:06,656] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-03T18:19:52.139033+00:00 [queued]>
+[2025-10-03 18:21:06,659] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-03T18:19:52.139033+00:00 [queued]>
+[2025-10-03 18:21:06,659] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 18:21:06,660] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-03 18:21:06,660] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 18:21:06,664] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_monitoring> on 2025-10-03 18:19:52.139033+00:00
+[2025-10-03 18:21:06,667] {standard_task_runner.py:52} INFO - Started process 311 to run task
+[2025-10-03 18:21:06,669] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_monitoring', 'manual__2025-10-03T18:19:52.139033+00:00', '--job-id', '765', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmprs5onl55', '--error-file', '/tmp/tmpkvgio5u4']
+[2025-10-03 18:21:06,669] {standard_task_runner.py:80} INFO - Job 765: Subtask model_monitoring
+[2025-10-03 18:21:06,692] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_monitoring manual__2025-10-03T18:19:52.139033+00:00 [running]> on host 1d34ab3a2c4b
+[2025-10-03 18:21:06,717] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_monitoring
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-03T18:19:52.139033+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-03T18:19:52.139033+00:00
+[2025-10-03 18:21:06,718] {model_monitoring.py:26} INFO - Loading processed data from /opt/***/data/processed/manga_processed.parquet for monitoring.
+[2025-10-03 18:21:06,771] {model_monitoring.py:28} INFO - Processed data loaded. Shape: (21795, 28)
+[2025-10-03 18:21:06,797] {model_monitoring.py:49} INFO - NaNs in production_data['score'] before prediction: 0
+[2025-10-03 18:21:06,797] {model_monitoring.py:50} INFO - Shape of production_data before prediction: (10897, 28)
+[2025-10-03 18:21:10,966] {local_task_job.py:84} ERROR - Received SIGTERM. Terminating subprocesses
+[2025-10-03 18:21:10,973] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 311. PIDs of all processes in the group: [311]
+[2025-10-03 18:21:10,974] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 311
+[2025-10-03 18:21:10,975] {taskinstance.py:1541} ERROR - Received SIGTERM. Terminating subprocesses.

@@ -1,0 +1,70 @@
+[2025-09-25 02:49:17,134] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T02:38:06.874295+00:00 [queued]>
+[2025-09-25 02:49:17,136] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T02:38:06.874295+00:00 [queued]>
+[2025-09-25 02:49:17,136] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 02:49:17,136] {taskinstance.py:1357} INFO - Starting attempt 3 of 3
+[2025-09-25 02:49:17,136] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 02:49:17,141] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): model_evaluation> on 2025-09-25 02:38:06.874295+00:00
+[2025-09-25 02:49:17,143] {standard_task_runner.py:52} INFO - Started process 889 to run task
+[2025-09-25 02:49:17,144] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'model_evaluation', 'manual__2025-09-25T02:38:06.874295+00:00', '--job-id', '72', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpr97515fd', '--error-file', '/tmp/tmplvs_xgfk']
+[2025-09-25 02:49:17,145] {standard_task_runner.py:80} INFO - Job 72: Subtask model_evaluation
+[2025-09-25 02:49:17,162] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.model_evaluation manual__2025-09-25T02:38:06.874295+00:00 [running]> on host 6afc1fdecefc
+[2025-09-25 02:49:17,186] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=model_evaluation
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T02:38:06.874295+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T02:38:06.874295+00:00
+[2025-09-25 02:49:17,187] {logging_mixin.py:115} INFO - Reading feature-engineered data from /opt/***/data/features/manga_features.parquet for evaluation split
+[2025-09-25 02:49:17,228] {logging_mixin.py:115} INFO - X_test shape: (3128, 11), y_test shape: (3128,)
+[2025-09-25 02:49:17,246] {logging_mixin.py:115} WARNING - 2025/09/25 02:49:17 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+[2025-09-25 02:49:17,253] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/model_evaluation.py", line 42, in model_evaluation
+    max_results=1
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/tracking/client.py", line 1800, in search_runs
+    experiment_ids, filter_string, run_view_type, max_results, order_by, page_token
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/tracking/_tracking_service/client.py", line 561, in search_runs
+    page_token=page_token,
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/store/tracking/abstract_store.py", line 307, in search_runs
+    experiment_ids, filter_string, run_view_type, max_results, order_by, page_token
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/store/tracking/file_store.py", line 886, in _search_runs
+    filtered = SearchUtils.filter(runs, filter_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 453, in filter
+    parsed = cls.parse_search_filter(filter_string)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 361, in parse_search_filter
+    return cls._process_statement(parsed[0])
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 338, in _process_statement
+    return [cls._get_comparison(si) for si in statement.tokens if isinstance(si, Comparison)]
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 338, in <listcomp>
+    return [cls._get_comparison(si) for si in statement.tokens if isinstance(si, Comparison)]
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 312, in _get_comparison
+    comp = cls._get_identifier(stripped_comparison[0].value, cls.VALID_SEARCH_ATTRIBUTE_KEYS)
+  File "/home/airflow/.local/lib/python3.7/site-packages/mlflow/utils/search_utils.py", line 227, in _get_identifier
+    "are '{}'".format(key, valid_attributes)
+mlflow.exceptions.MlflowException: Invalid attribute key 'runName' specified. Valid keys are '{'end_time', 'run_id', 'status', 'user_id', 'start_time', 'artifact_uri', 'run_name'}'
+[2025-09-25 02:49:17,258] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=model_evaluation, execution_date=20250925T023806, start_date=20250925T024917, end_date=20250925T024917
+[2025-09-25 02:49:17,262] {standard_task_runner.py:97} ERROR - Failed to execute job 72 for task model_evaluation (Invalid attribute key 'runName' specified. Valid keys are '{'end_time', 'run_id', 'status', 'user_id', 'start_time', 'artifact_uri', 'run_name'}'; 889)
+[2025-09-25 02:49:17,285] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-09-25 02:49:17,298] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

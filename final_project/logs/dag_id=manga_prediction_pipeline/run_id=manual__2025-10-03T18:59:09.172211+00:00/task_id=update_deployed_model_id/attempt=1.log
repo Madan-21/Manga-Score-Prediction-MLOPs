@@ -1,0 +1,24 @@
+[2025-10-03 19:00:24,519] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.update_deployed_model_id manual__2025-10-03T18:59:09.172211+00:00 [queued]>
+[2025-10-03 19:00:24,522] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.update_deployed_model_id manual__2025-10-03T18:59:09.172211+00:00 [queued]>
+[2025-10-03 19:00:24,522] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 19:00:24,522] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-10-03 19:00:24,522] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-10-03 19:00:24,527] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): update_deployed_model_id> on 2025-10-03 18:59:09.172211+00:00
+[2025-10-03 19:00:24,530] {standard_task_runner.py:52} INFO - Started process 311 to run task
+[2025-10-03 19:00:24,531] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'update_deployed_model_id', 'manual__2025-10-03T18:59:09.172211+00:00', '--job-id', '832', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpo_891_4v', '--error-file', '/tmp/tmp23tkb4ay']
+[2025-10-03 19:00:24,532] {standard_task_runner.py:80} INFO - Job 832: Subtask update_deployed_model_id
+[2025-10-03 19:00:24,552] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.update_deployed_model_id manual__2025-10-03T18:59:09.172211+00:00 [running]> on host 13bf0fcbea70
+[2025-10-03 19:00:24,577] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=update_deployed_model_id
+AIRFLOW_CTX_EXECUTION_DATE=2025-10-03T18:59:09.172211+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-10-03T18:59:09.172211+00:00
+[2025-10-03 19:00:24,581] {logging_mixin.py:115} INFO - Updated latest_run_id.txt with run_id: 226d64f692534e58865438b21346b44f
+[2025-10-03 19:00:24,581] {python.py:173} INFO - Done. Returned value was: None
+[2025-10-03 19:00:24,585] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=update_deployed_model_id, execution_date=20251003T185909, start_date=20251003T190024, end_date=20251003T190024
+[2025-10-03 19:00:24,631] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-10-03 19:00:24,646] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,150 @@
+volumes:
+  postgres_data:
+  mariadb_data:
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      - POSTGRES_USER=airflow
+      - POSTGRES_PASSWORD=airflow
+      - POSTGRES_DB=airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  mariadb:
+    image: mariadb:10.6
+    container_name: mariadb
+    environment:
+      - MARIADB_ROOT_PASSWORD=root
+      - MARIADB_DATABASE=manga_db
+      - MARIADB_USER=manga_user
+      - MARIADB_PASSWORD=manga_password
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  airflow-init:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: airflow_init
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mariadb:
+        condition: service_healthy
+    volumes:
+      - ./mlflow_data:/mlflow_data
+      - ./data:/opt/airflow/data
+      - ./src:/opt/airflow/src
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    entrypoint: /bin/bash
+    command: -c "airflow db init && airflow users create --username admin --password admin --firstname Madan --lastname Pandey --role Admin --email madan@example.com"
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: airflow_webserver
+    restart: always
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+      mariadb:
+        condition: service_healthy
+    volumes:
+      - ./mlflow_data:/mlflow_data
+      - ./data:/opt/airflow/data
+      - ./src:/opt/airflow/src
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+    ports:
+      - "8080:8080"
+    command: webserver
+    healthcheck:
+      test: ["CMD-SHELL", "curl --fail http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: airflow_scheduler
+    restart: always
+    depends_on:
+      airflow-init:
+        condition: service_completed_successfully
+      mariadb:
+        condition: service_healthy
+    volumes:
+      - ./mlflow_data:/mlflow_data
+      - ./data:/opt/airflow/data
+      - ./src:/opt/airflow/src
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: scheduler
+    environment:
+      - AIRFLOW__CORE__EXECUTOR=LocalExecutor
+      - AIRFLOW__CORE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres/airflow
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.3.0
+    container_name: mlflow_server
+    restart: always
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./mlflow_data:/mlflow_data
+    command: mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri file:///mlflow_data/backend --default-artifact-root file:///mlflow_data/artifacts
+
+  fastapi_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.fastapi
+    container_name: fastapi_app
+    restart: always
+    depends_on:
+      - mlflow
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/opt/airflow/src
+      - ./data:/opt/airflow/data
+      - ./mlflow_data:/mlflow_data
+    environment:
+      - MLFLOW_TRACKING_URI=file:///mlflow_data/backend
+    command: uvicorn src.app:app --host 0.0.0.0 --port 8000

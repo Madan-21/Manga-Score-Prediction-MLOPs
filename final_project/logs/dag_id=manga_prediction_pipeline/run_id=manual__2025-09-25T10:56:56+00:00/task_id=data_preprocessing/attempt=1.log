@@ -1,0 +1,35 @@
+[2025-09-25 10:57:56,994] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T10:56:56+00:00 [queued]>
+[2025-09-25 10:57:56,997] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T10:56:56+00:00 [queued]>
+[2025-09-25 10:57:56,998] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:57:56,998] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 10:57:56,998] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:57:57,002] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): data_preprocessing> on 2025-09-25 10:56:56+00:00
+[2025-09-25 10:57:57,004] {standard_task_runner.py:52} INFO - Started process 1334 to run task
+[2025-09-25 10:57:57,005] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'data_preprocessing', 'manual__2025-09-25T10:56:56+00:00', '--job-id', '304', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpzmcv1nof', '--error-file', '/tmp/tmpn1nhyad5']
+[2025-09-25 10:57:57,006] {standard_task_runner.py:80} INFO - Job 304: Subtask data_preprocessing
+[2025-09-25 10:57:57,024] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.data_preprocessing manual__2025-09-25T10:56:56+00:00 [running]> on host 19d9b7ffabd0
+[2025-09-25 10:57:57,050] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=data_preprocessing
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T10:56:56+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T10:56:56+00:00
+[2025-09-25 10:57:57,050] {logging_mixin.py:115} INFO - Connecting to MariaDB to read data...
+[2025-09-25 10:57:57,050] {logging_mixin.py:115} INFO - Attempting to connect to MariaDB at mariadb:3306/manga_db
+[2025-09-25 10:57:57,072] {authentication.py:66} INFO - package: mysql.connector.plugins
+[2025-09-25 10:57:57,072] {authentication.py:67} INFO - plugin_name: mysql_native_password
+[2025-09-25 10:57:57,073] {authentication.py:71} INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLNativePasswordAuthPlugin
+[2025-09-25 10:57:57,076] {logging_mixin.py:115} INFO - Successfully connected to MariaDB.
+[2025-09-25 10:57:58,099] {logging_mixin.py:115} INFO - Data read successfully from MariaDB. Shape: (66371, 28)
+[2025-09-25 10:57:58,099] {logging_mixin.py:115} INFO - Dropping rows with missing scores. Original rows: 66371
+[2025-09-25 10:57:58,112] {logging_mixin.py:115} INFO - Rows after dropping missing scores: 21795
+[2025-09-25 10:57:58,112] {logging_mixin.py:115} INFO - Data preprocessing complete.
+[2025-09-25 10:57:58,112] {logging_mixin.py:115} INFO - Saving processed data to /opt/***/data/processed/manga_processed.parquet
+[2025-09-25 10:57:58,185] {logging_mixin.py:115} INFO - Processed data saved successfully.
+[2025-09-25 10:57:58,189] {python.py:173} INFO - Done. Returned value was: None
+[2025-09-25 10:57:58,194] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=manga_prediction_pipeline, task_id=data_preprocessing, execution_date=20250925T105656, start_date=20250925T105756, end_date=20250925T105758
+[2025-09-25 10:57:58,245] {local_task_job.py:156} INFO - Task exited with return code 0
+[2025-09-25 10:57:58,261] {local_task_job.py:273} INFO - 1 downstream tasks scheduled from follow-on schedule check

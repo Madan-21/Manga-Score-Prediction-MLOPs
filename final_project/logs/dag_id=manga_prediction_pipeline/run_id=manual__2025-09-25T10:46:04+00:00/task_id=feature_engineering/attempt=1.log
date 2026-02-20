@@ -1,0 +1,44 @@
+[2025-09-25 10:47:05,206] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-25T10:46:04+00:00 [queued]>
+[2025-09-25 10:47:05,209] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-25T10:46:04+00:00 [queued]>
+[2025-09-25 10:47:05,210] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:47:05,210] {taskinstance.py:1357} INFO - Starting attempt 1 of 1
+[2025-09-25 10:47:05,210] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2025-09-25 10:47:05,214] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): feature_engineering> on 2025-09-25 10:46:04+00:00
+[2025-09-25 10:47:05,216] {standard_task_runner.py:52} INFO - Started process 916 to run task
+[2025-09-25 10:47:05,218] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'manga_prediction_pipeline', 'feature_engineering', 'manual__2025-09-25T10:46:04+00:00', '--job-id', '281', '--raw', '--subdir', 'DAGS_FOLDER/manga_prediction_pipeline.py', '--cfg-path', '/tmp/tmpf_a_visy', '--error-file', '/tmp/tmpn6t49r9n']
+[2025-09-25 10:47:05,218] {standard_task_runner.py:80} INFO - Job 281: Subtask feature_engineering
+[2025-09-25 10:47:05,235] {task_command.py:370} INFO - Running <TaskInstance: manga_prediction_pipeline.feature_engineering manual__2025-09-25T10:46:04+00:00 [running]> on host 19d9b7ffabd0
+[2025-09-25 10:47:05,258] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=manga_prediction_pipeline
+AIRFLOW_CTX_TASK_ID=feature_engineering
+AIRFLOW_CTX_EXECUTION_DATE=2025-09-25T10:46:04+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2025-09-25T10:46:04+00:00
+[2025-09-25 10:47:05,259] {logging_mixin.py:115} INFO - Reading processed data from /opt/***/data/processed/manga_processed.parquet
+[2025-09-25 10:47:05,297] {logging_mixin.py:115} INFO - Processed data read successfully. Shape: (21795, 27)
+[2025-09-25 10:47:05,302] {logging_mixin.py:115} INFO - Scaling numerical columns: ['members', 'favorites', 'scored_by', 'volumes', 'chapters']
+[2025-09-25 10:47:05,304] {logging_mixin.py:115} INFO - One-hot encoding categorical columns: ['type']
+[2025-09-25 10:47:05,304] {taskinstance.py:1889} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/src/feature_engineering.py", line 36, in feature_engineering
+    df = pd.get_dummies(df, columns=categorical_cols, drop_first=True)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/reshape/reshape.py", line 890, in get_dummies
+    data_to_encode = data[columns]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/frame.py", line 3464, in __getitem__
+    indexer = self.loc._get_listlike_indexer(key, axis=1)[1]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1314, in _get_listlike_indexer
+    self._validate_read_indexer(keyarr, indexer, axis)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/indexing.py", line 1374, in _validate_read_indexer
+    raise KeyError(f"None of [{key}] are in the [{axis_name}]")
+KeyError: "None of [Index(['type'], dtype='object')] are in the [columns]"
+[2025-09-25 10:47:05,309] {taskinstance.py:1400} INFO - Marking task as FAILED. dag_id=manga_prediction_pipeline, task_id=feature_engineering, execution_date=20250925T104604, start_date=20250925T104705, end_date=20250925T104705
+[2025-09-25 10:47:05,313] {standard_task_runner.py:97} ERROR - Failed to execute job 281 for task feature_engineering ("None of [Index(['type'], dtype='object')] are in the [columns]"; 916)
+[2025-09-25 10:47:05,357] {local_task_job.py:156} INFO - Task exited with return code 1
+[2025-09-25 10:47:05,372] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
